@@ -1,57 +1,89 @@
-// Header.js
-
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Flex, Text, IconButton, Box, List, ListItem, Link } from '@chakra-ui/react';
+import { Link as ScrollLink } from 'react-scroll';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-import './Header.css';
-
-function Header() {
+const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleMenuClick = () => {
+  const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleNavLinkClick = () => {
-    setShowMenu(false);
+  const handleSectionClick = (sectionId) => {
+    if (showMenu) {
+      setShowMenu(false);
+    }
+    navigate(`/${sectionId}`);
   };
 
   return (
-    <div className="App-header">
-      <div className="menu-icon" onClick={handleMenuClick}>
-        {showMenu ? <FaTimes /> : <FaBars />} {/* Toggle between hamburger and close icons */}
-      </div>
-      <nav className={`App-nav ${showMenu ? 'show' : ''}`}>
-        <ul>
-          <li>
-            <Link to="/" onClick={handleNavLinkClick}>
-              Home
+    <Flex
+      align="center"
+      justify="space-between"
+      bg="#282c34"
+      p={4}
+      color="white"
+      position="relative"
+    >
+      <Text fontSize="2xl" fontWeight="bold">
+        Mridul Awasthi
+      </Text>
+      <IconButton
+        display={{ base: 'block', md: 'none' }}
+        icon={showMenu ? <CloseIcon /> : <HamburgerIcon />}
+        onClick={toggleMenu}
+        fontSize="20px"
+        color="white"
+        aria-label={showMenu ? 'Close Menu' : 'Open Menu'}
+      />
+      <Box
+        display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
+        position={{ base: 'fixed', md: 'static' }}
+        top="60px"
+        right={{ base: '0', md: 'auto' }}
+        left={{ base: '0', md: 'auto' }}
+        bg="#333"
+        flexDirection={{ base: 'column', md: 'row' }}
+      >
+        <List
+          listStyleType="none"
+          m={0}
+          p={0}
+          display="flex"
+          flexDirection={{ base: 'column', md: 'row' }}
+        >
+          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
+            <Link
+              onClick={() => handleSectionClick('aboutMe')}
+              color={location.pathname === '/aboutMe' ? 'teal.500' : 'white'}
+            >
+              About Me
             </Link>
-          </li>
-          <li>
-            <Link to="/about" onClick={handleNavLinkClick}>
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" onClick={handleNavLinkClick}>
+          </ListItem>
+          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
+            <Link
+              onClick={() => handleSectionClick('projects')}
+              color={location.pathname === '/projects' ? 'teal.500' : 'white'}
+            >
               Projects
             </Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={handleNavLinkClick}>
+          </ListItem>
+          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
+            <Link
+              onClick={() => handleSectionClick('contact')}
+              color={location.pathname === '/contact' ? 'teal.500' : 'white'}
+            >
               Contact
             </Link>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <h1>Mridul Awasthi</h1>
-        <p>Your tagline or description goes here.</p>
-      </div>
-    </div>
+          </ListItem>
+        </List>
+      </Box>
+    </Flex>
   );
-}
+};
 
 export default Header;
