@@ -1,16 +1,24 @@
-// App.js
 import React from 'react';
-import { ChakraProvider, CSSReset } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { extendTheme } from '@chakra-ui/react';
 import Header from './components/Header/Header';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+
+// Define the theme
+const theme = extendTheme({
+  fonts: {
+    heading: 'Courier, monospace',
+    body: 'Courier, monospace',
+  },
+});
 
 function App() {
   return (
-    <ChakraProvider>
-      <CSSReset />
+    <ChakraProvider theme={theme}>
       <Router>
         <Header />
         <Routes>

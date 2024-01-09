@@ -1,11 +1,10 @@
-/* App.css */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f8f9fa;
-  color: #212529;
+  background-color: #0c0f18;
+  color: white;
 }
 
 .App {
@@ -17,7 +16,87 @@ body {
   pointer-events: none;
 }
 
-/* Your existing styles for .App-header, .menu-icon, .App-nav, etc. */
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
 
-/* Additional Chakra UI Styles */
-/* ChakraProvider sets styles globally, so no need for some of your original styles */
+.menu-icon {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+}
+
+.close-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .App-nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
+    background-color: #333;
+  }
+
+  .App-nav.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-nav ul {
+    flex-direction: column;
+  }
+
+  .App-nav li {
+    margin: 10px 0;
+  }
+
+  .App-header h1,
+  .App-header p {
+    margin: 0;
+  }
+
+  .close-icon {
+    display: block;
+  }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 601px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .App-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,3 +1,5 @@
+// Header.js
+
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Flex, Text, IconButton, Box, List, ListItem, Link } from '@chakra-ui/react';
@@ -39,6 +41,8 @@ const Header = () => {
         fontSize="20px"
         color="white"
         aria-label={showMenu ? 'Close Menu' : 'Open Menu'}
+        background="transparent" // Transparent background for the icon button
+        _hover={{ background: 'transparent' }} // Transparent background on hover
       />
       <Box
         display={{ base: showMenu ? 'block' : 'none', md: 'flex' }}
