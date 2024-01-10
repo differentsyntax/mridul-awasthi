@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { Flex, Text, IconButton, Box, List, ListItem, Link, Image } from '@chakra-ui/react';
+import { Flex, IconButton, Box, List, ListItem, Link, Image } from '@chakra-ui/react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 // Import your sun image
 import sunImage from './../../images/sunflower.png';
-import headerBg from './../../images/planetsheader.png';
+import headerBg from './../../images/header2.png';
 
 const AnimatedBox = motion(Box);
 
@@ -30,7 +30,7 @@ const Header = () => {
     <Flex
       align="center"
       justify="space-between"
-      p={6}
+      p={2}
       color="white"
       position="fixed"
       top="0"
@@ -41,7 +41,7 @@ const Header = () => {
         backgroundImage: `url(${headerBg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
+        backgroundPosition: 'center',
       }}
     >
       {/* Circular sun image with animation */}
@@ -59,31 +59,27 @@ const Header = () => {
         <Image
           src={sunImage}
           alt="Sun"
-          boxSize={{ base: "60px", md: "150px" }}
+          boxSize={{ base: '60px', md: '150px' }}
           borderRadius="full"
         />
       </AnimatedBox>
-
-      <Text fontSize="2xl" fontWeight="bold" marginTop="10px">
-        Mridul Awasthi
-      </Text>
       <IconButton
         display={{ base: 'block', md: 'none' }}
         icon={showMenu ? <CloseIcon /> : <HamburgerIcon />}
         onClick={toggleMenu}
         fontSize="24px"
-        color="white"
+        color="black"
         aria-label={showMenu ? 'Close Menu' : 'Open Menu'}
-        background="transparent"
+        background="rgba(255, 255, 255, 0.5)"
         _hover={{ background: 'transparent' }}
       />
       <Box
         display={{ base: showMenu ? 'flex' : 'none', md: 'flex' }}
         position="fixed"
-        top={{ base: '100px', md: '140px' }}
+        top={{ base: '60px', md: '140px' }}
         left={{ base: '0', md: '0' }}
         right={{ base: '0', md: '0' }}
-        bg="rgba(0, 0, 0, 0.5)" // Adjust the background color or make it transparent
+        bg="rgba(0, 0, 0, 0.2)" // Adjust the background color or make it transparent
         flexDirection={{ base: 'column', md: 'row' }}
         width="100%"
         zIndex="999"
@@ -95,31 +91,26 @@ const Header = () => {
           display="flex"
           flexDirection={{ base: 'column', md: 'row' }}
           width="100%"
+          alignItems="center" // Center align the items
+          justifyContent="center" // Center align the items
         >
           <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
             <Link
-              onClick={() => handleSectionClick('person')}
-              color={location.pathname === '/person' ? 'teal.500' : 'white'}
+              onClick={() => handleSectionClick('about')}
+              color={(location.pathname === '/' || location.pathname === '/about') ? 'teal.500' : 'white'}
             >
-              Person
-            </Link>
-          </ListItem>
-          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
-            <Link
-              onClick={() => handleSectionClick('projects')}
-              color={location.pathname === '/projects' ? 'teal.500' : 'white'}
-            >
-              Projects
+              About
             </Link>
           </ListItem>
           <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
             <Link
               onClick={() => handleSectionClick('contact')}
-              color={location.pathname === '/contact' ? 'teal.500' : 'white'}
+              color={(location.pathname === '/contact') ? 'teal.500' : 'white'}
             >
               Contact
             </Link>
           </ListItem>
+          {/* ... (other list items) */}
         </List>
       </Box>
     </Flex>

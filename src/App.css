@@ -3,8 +3,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0c0f18;
-  color: white;
 }
 
 .App {
