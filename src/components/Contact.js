@@ -15,7 +15,7 @@ function Contact() {
       mt={-12}
     >
       <Box p={{ base: 8, md: 8 }}>
-      <Heading align="center" justify="center" mb={100} mt={{base: 50, md: 220}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}>
+      <Heading visibility={{base: 'visible', md: 'hidden'}} align="center" justify="center" mb={100} mt={{base: 50, md: 120}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}>
             Contact
           </Heading>
         <UnorderedList listStyleType="none" p={0} display="grid" gridTemplateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={4}>

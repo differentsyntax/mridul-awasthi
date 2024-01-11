@@ -79,7 +79,7 @@ const Header = () => {
         top={{ base: '60px', md: '170px' }}
         left={{ base: '0', md: '0' }}
         right={{ base: '0', md: '0' }}
-        bg="rgba(0, 0, 0, 0.7)"
+        bg={{base: "rgba(0, 0, 0, 1.0)", md: "rgba(0, 0, 0, 0.7)"}}
         flexDirection={{ base: 'column', md: 'row' }}
         width="100%"
         zIndex="999"

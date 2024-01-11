@@ -44,9 +44,9 @@ const Timeline = () => {
   ];
 
   return (
-    <Flex align="center" justify="center" height="100vh" mt={{base: 650, md: 550}}>
+    <Flex align="center" justify="center" height="100vh" mt={{base: 650, md: 450}}>
       <Box p={8}>
-        <Heading align="center" justify="center" mb={100} mt={{base: 50, md: 220}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}>
+        <Heading visibility={{base: 'visible', md: 'hidden'}} align="center" justify="center" mb={100} mt={{base: 50, md: 220}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }} >
             Timeline
           </Heading>
         <VStack align="start" spacing={2} position="relative" ml={{base: 5, md: 175}}>
