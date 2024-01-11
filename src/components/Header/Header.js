@@ -30,7 +30,7 @@ const Header = () => {
     <Flex
       align="center"
       justify="space-between"
-      p={2}
+      p={0}
       color="white"
       position="fixed"
       top="0"
@@ -53,13 +53,15 @@ const Header = () => {
         transition={{
           ease: 'linear',
           repeat: Infinity,
-          duration: 10,
+          duration: 30,
         }}
+        zIndex="1000"
+        ml={{ base: '-35px', md: '-110px' }}
       >
         <Image
           src={sunImage}
           alt="Sun"
-          boxSize={{ base: '60px', md: '150px' }}
+          boxSize={{ base: '70px', md: '220px' }}
           borderRadius="full"
         />
       </AnimatedBox>
@@ -76,10 +78,10 @@ const Header = () => {
       <Box
         display={{ base: showMenu ? 'flex' : 'none', md: 'flex' }}
         position="fixed"
-        top={{ base: '60px', md: '140px' }}
+        top={{ base: '60px', md: '170px' }}
         left={{ base: '0', md: '0' }}
         right={{ base: '0', md: '0' }}
-        bg="rgba(0, 0, 0, 0.2)" // Adjust the background color or make it transparent
+        bg="rgba(0, 0, 0, 0.7)" // Adjust the background color or make it transparent
         flexDirection={{ base: 'column', md: 'row' }}
         width="100%"
         zIndex="999"
