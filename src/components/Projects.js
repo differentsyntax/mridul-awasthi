@@ -9,6 +9,7 @@ function Projects() {
       justify="center"
       height="100vh"  // Set the height of the container to full viewport height
     >
+        <Heading align="center" justify="center" p={6}>Projects</Heading>
         <Box p={{ base: 8, md: 8 }} >
         <Heading as="h2" fontSize="2xl" mb={4}>
             Projects

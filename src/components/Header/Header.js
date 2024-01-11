@@ -1,10 +1,9 @@
+// Header.js
 import React, { useState } from 'react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Flex, IconButton, Box, List, ListItem, Link, Image } from '@chakra-ui/react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
-// Import your sun image
 import sunImage from './../../images/sunflower.png';
 import headerBg from './../../images/header2.png';
 
@@ -44,7 +43,6 @@ const Header = () => {
         backgroundPosition: 'center',
       }}
     >
-      {/* Circular sun image with animation */}
       <AnimatedBox
         animate={{
           rotate: 360,
@@ -81,7 +79,7 @@ const Header = () => {
         top={{ base: '60px', md: '170px' }}
         left={{ base: '0', md: '0' }}
         right={{ base: '0', md: '0' }}
-        bg="rgba(0, 0, 0, 0.7)" // Adjust the background color or make it transparent
+        bg="rgba(0, 0, 0, 0.7)"
         flexDirection={{ base: 'column', md: 'row' }}
         width="100%"
         zIndex="999"
@@ -93,8 +91,8 @@ const Header = () => {
           display="flex"
           flexDirection={{ base: 'column', md: 'row' }}
           width="100%"
-          alignItems="center" // Center align the items
-          justifyContent="center" // Center align the items
+          alignItems="center"
+          justifyContent="center"
         >
           <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
             <Link
@@ -106,13 +104,20 @@ const Header = () => {
           </ListItem>
           <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
             <Link
+              onClick={() => handleSectionClick('timeline')}
+              color={(location.pathname === '/timeline') ? 'teal.500' : 'white'}
+            >
+              Timeline
+            </Link>
+          </ListItem>
+          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
+            <Link
               onClick={() => handleSectionClick('contact')}
               color={(location.pathname === '/contact') ? 'teal.500' : 'white'}
             >
               Contact
             </Link>
           </ListItem>
-          {/* ... (other list items) */}
         </List>
       </Box>
     </Flex>
