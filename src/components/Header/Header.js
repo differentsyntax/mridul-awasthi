@@ -112,6 +112,14 @@ const Header = () => {
           </ListItem>
           <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
             <Link
+              onClick={() => handleSectionClick('playlist')}
+              color={(location.pathname === '/playlist') ? 'teal.500' : 'white'}
+            >
+              Playlist
+            </Link>
+          </ListItem>
+          <ListItem mb={{ base: '10px', md: '0' }} mr={{ base: '0', md: '10px' }}>
+            <Link
               onClick={() => handleSectionClick('contact')}
               color={(location.pathname === '/contact') ? 'teal.500' : 'white'}
             >

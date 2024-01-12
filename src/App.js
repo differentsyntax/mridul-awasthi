@@ -4,12 +4,13 @@ import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { extendTheme } from '@chakra-ui/react';
 import Header from './components/Header/Header';
-import About from './components/About';
+import Playlist from './components/Playlist';
 import Timeline from './components/Timeline'; // Import the new Timeline component
 import Contact from './components/Contact';
 import './App.css';
 
 import wholeBg from './images/musafir.png';
+import About from './components/About';
 
 const theme = extendTheme({
   fonts: {
@@ -39,6 +40,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/playlist" element={<Playlist />} />
         </Routes>
       </Router>
     </ChakraProvider>
