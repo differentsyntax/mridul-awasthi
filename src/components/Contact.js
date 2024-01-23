@@ -5,15 +5,17 @@ import github from './../images/github.png';
 import linkedin from './../images/linkedin.png';
 import instagram from './../images/instagram.png';
 import email from './../images/email.png';
+import MyCalendlyComponent from './MyCalendlyComponent';
 
 function Contact() {
   return (
     <Flex
-      align="center"
+      flexDirection={'column'}
+    >
+      <Flex align="center"
       justify="center"
       height="100vh"  // Set the height of the container to full viewport height
-      mt={-12}
-    >
+      mt={-12}>
       <Box p={{ base: 8, md: 8 }}>
       <Heading visibility={{base: 'visible', md: 'hidden'}} align="center" justify="center" mb={100} mt={{base: 50, md: 120}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }}>
             Contact
@@ -44,6 +46,10 @@ function Contact() {
           </ListItem>
         </UnorderedList>
       </Box>
+      </Flex>
+      <Flex>
+        <MyCalendlyComponent/>
+      </Flex>
     </Flex>
   );
 }
