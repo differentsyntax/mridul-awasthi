@@ -16,7 +16,7 @@ const MyCalendlyComponent = () => {
   }, []);
 
   return (
-    <div className="calendly-inline-widget" data-url="https://calendly.com/mridulawasthi/conversation?background_color=706f6f&text_color=fdfbfb&primary_color=090909" style={{ minWidth: 350, height: 1000, margin:'auto' }}></div>
+    <div className="calendly-inline-widget" data-url="https://calendly.com/mridulawasthi/interview?background_color=706f6f&text_color=fdfbfb&primary_color=090909" style={{ minWidth: 350, height: 1000, margin:'auto' }}></div>
   );
 };
 

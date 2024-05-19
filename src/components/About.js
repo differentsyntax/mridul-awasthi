@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Heading, Text, Flex, Avatar } from '@chakra-ui/react';
 
-import myself from './../images/myself.JPG';
+import myself from './../images/mrids.jpg';
 
 function About() {
   return (
@@ -12,7 +12,7 @@ function About() {
     >
       <Box p={{ base: 2, md: 4, lg: 8 }} textAlign="center">
         <Avatar
-          size="2xl"
+          size={'2xl'}
           name="Mridul Awasthi"
           src={myself}
           mb={4}
