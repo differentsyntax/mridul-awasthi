@@ -30,21 +30,22 @@ const TimelineDot = ({ isRocket }) => {
 
 const Timeline = () => {
   const events = [
-    { title: 'First Job', description: 'Amazon | Software Development Engineer | Seattle, WA, USA | August, 2021' },
-    { title: 'Graduation', description: 'June, 2021' },
-    { title: 'Internship', description: 'HomeSource Systems | Software Engineer | Sewell, NJ, USA | June - September, 2020' },
-    { title: 'Co-op', description: 'Brandywine Living | Jr. Programmer | Mount Laurel, NJ, USA | April - September, 2019' },
-    { title: 'Co-op', description: 'Comcast | Cloud Application Platform Engineer | West Chester, PA, USA | April - September, 2018' },
-    { title: 'Study Abroad Exchange Semester', description: 'Nanyang Technological University | Singapore | July - December, 2017' },
-    { title: 'University', description: 'Drexel University | Philadelphia, PA, USA | September, 2016' },
-    { title: 'High School', description: 'City Montessori School | Lucknow, UP, India | October, 2010' },
-    { title: 'Secondary School', description: 'City Montessori School | Lucknow, UP, India | April, 2008 ' },
-    { title: 'Primary School', description: 'Red Rose Senior Secondary School | Lucknow, UP, India | April, 2000' },
-    { title: 'Born', description: 'January, 1998' },
+    { title: 'Visa', description: 'Senior Software Engineer | Bellevue, WA, USA | March, 2025' },
+    { title: 'Amazon', description: 'Software Development Engineer | Seattle, WA, USA | August, 2021' },
+    { title: 'Drexel University', description: 'Graduation | June, 2021' },
+    { title: 'HomeSource Systems', description: 'Internship | Software Engineer | Sewell, NJ, USA | June - September, 2020' },
+    { title: 'Brandywine Living', description: 'Co-op | Jr. Programmer | Mount Laurel, NJ, USA | April - September, 2019' },
+    { title: 'Comcast', description: 'Co-op | Cloud Application Platform Engineer | West Chester, PA, USA | April - September, 2018' },
+    { title: 'Nanyang Technological University', description: 'Study Abroad | Singapore | July - December, 2017' },
+    { title: 'Drexel University', description: 'Undergrad | Philadelphia, PA, USA | September, 2016' },
+    { title: 'City Montessori School, Gomti Nagar - I', description: 'High School | Lucknow, UP, India | October, 2010' },
+    { title: 'City Montessori School, RDSO', description: 'Secondary School | Lucknow, UP, India | April, 2008 ' },
+    { title: 'Red Rose Senior Secondary School', description: 'Primary School | Lucknow, UP, India | April, 2000' },
+    { title: 'Lucknow', description: 'Born | January, 1998' },
   ];
 
   return (
-    <Flex align="center" justify="center" height="100vh" mt={{base: 650, md: 450}}>
+    <Flex align="center" justify="center" height="100vh" mt={{base: 600, md: 500}}>
       <Box p={8}>
         <Heading visibility={{base: 'visible', md: 'hidden'}} align="center" justify="center" mb={100} mt={{base: 50, md: 220}} fontSize={{ base: 'md', md: 'lg', lg: 'xl' }} >
             Timeline

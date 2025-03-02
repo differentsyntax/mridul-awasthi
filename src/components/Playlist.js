@@ -3,15 +3,12 @@ import { Box, Heading, Text, SimpleGrid } from '@chakra-ui/react';
 
 const Playlist = () => {
   const trackURLs = [
+    'https://open.spotify.com/embed/track/7KH7qQDC34EPT0sK3EJP3s?utm_source=generator',
+    'https://open.spotify.com/embed/track/5FVd6KXrgO9B3JPmC8OPst?utm_source=generator',
+    'https://open.spotify.com/embed/track/2Yer0p7uB2lVBUAtANuuQp?utm_source=generator',
+    'https://open.spotify.com/embed/track/5JVbvCHX10U2pLa5DEqGav?utm_source=generator',
+    'https://open.spotify.com/embed/track/4vHRQnzGcKEtqsLH70tAms?utm_source=generator',
     'https://open.spotify.com/embed/track/3ibHHhuRj8od0hgKx0xHRb?utm_source=generator',
-    'https://open.spotify.com/embed/track/1CS7Sd1u5tWkstBhpssyjP?utm_source=generator',
-    'https://open.spotify.com/embed/track/4pkb8SbRGeHAvdb87v9rpf?utm_source=generator',
-    'https://open.spotify.com/embed/track/3VRxFM7wiJYKNHvouPZhaH?utm_source=generator',
-    'https://open.spotify.com/embed/track/69KsBGYUsA6bn6BKdS9eTF?utm_source=generator',
-    'https://open.spotify.com/embed/track/6qrifdo7QINdPQr80IelGi?utm_source=generator',
-    'https://open.spotify.com/embed/track/0mAswKg3RCbmXAV4KYTUxM?utm_source=generator',
-    'https://open.spotify.com/embed/track/3aksi3t5XGGiemQLh8I8qY?utm_source=generator',
-    // Add more track URLs as needed
   ];
 
   return (
